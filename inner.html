@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Админ панель обменника </title>
+	<link href="modules/core/common/img/favicon.ico" rel="shortcut icon">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+	<!-- VENDORS -->
+	<!-- v2.0.0 -->
+	<link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/jscrollpane/style/jquery.jscrollpane.css">
+	<link rel="stylesheet" type="text/css" href="vendors/ladda/dist/ladda-themeless.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/bootstrap-select/dist/css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/select2/dist/css/select2.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/fullcalendar/dist/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/bootstrap-sweetalert/dist/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="vendors/summernote/dist/summernote.css">
+	<link rel="stylesheet" type="text/css" href="vendors/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/ionrangeslider/css/ion.rangeSlider.css">
+	<link rel="stylesheet" type="text/css" href="vendors/datatables/media/css/dataTables.bootstrap4.css">
+	<link rel="stylesheet" type="text/css" href="vendors/c3/c3.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/chartist/dist/chartist.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/nprogress/nprogress.css">
+	<link rel="stylesheet" type="text/css" href="vendors/jquery-steps/demo/css/jquery.steps.css">
+	<link rel="stylesheet" type="text/css" href="vendors/dropify/dist/css/dropify.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/font-linearicons/style.css">
+	<link rel="stylesheet" type="text/css" href="vendors/font-icomoon/style.css">
+	<link rel="stylesheet" type="text/css" href="vendors/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/cleanhtmlaudioplayer/src/player.css">
+	<link rel="stylesheet" type="text/css" href="vendors/cleanhtmlvideoplayer/src/player.css">
+	<script src="vendors/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/tether/dist/js/tether.min.js"></script>
+	<script src="vendors/jquery-ui/jquery-ui.min.js"></script>
+	<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<script src="vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
+	<script src="vendors/spin.js/spin.js"></script>
+	<script src="vendors/ladda/dist/ladda.min.js"></script>
+	<script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<script src="vendors/select2/dist/js/select2.full.min.js"></script>
+	<script src="vendors/html5-form-validation/dist/jquery.validation.min.js"></script>
+	<script src="vendors/jquery-typeahead/dist/jquery.typeahead.min.js"></script>
+	<script src="vendors/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+	<script src="vendors/autosize/dist/autosize.min.js"></script>
+	<script src="vendors/bootstrap-show-password/bootstrap-show-password.min.js"></script>
+	<script src="vendors/moment/min/moment.min.js"></script>
+	<script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script src="vendors/bootstrap-sweetalert/dist/sweetalert.min.js"></script>
+	<script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+	<script src="vendors/summernote/dist/summernote.min.js"></script>
+	<script src="vendors/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="vendors/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+	<script src="vendors/nestable/jquery.nestable.js"></script>
+	<script src="vendors/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="vendors/datatables/media/js/dataTables.bootstrap4.js"></script>
+	<script src="vendors/datatables-fixedcolumns/js/dataTables.fixedColumns.js"></script>
+	<script src="vendors/datatables-responsive/js/dataTables.responsive.js"></script>
+	<script src="vendors/editable-table/mindmup-editabletable.js"></script>
+	<script src="vendors/d3/d3.min.js"></script>
+	<script src="vendors/c3/c3.min.js"></script>
+	<script src="vendors/chartist/dist/chartist.min.js"></script>
+	<script src="vendors/peity/jquery.peity.min.js"></script>
+	<script src="vendors/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+	<script src="vendors/jquery-countTo/jquery.countTo.js"></script>
+	<script src="vendors/nprogress/nprogress.js"></script>
+	<script src="vendors/jquery-steps/build/jquery.steps.min.js"></script>
+	<script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+	<script src="vendors/dropify/dist/js/dropify.min.js"></script>
+	<script src="vendors/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js"></script>
+	<script src="vendors/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"></script>
+
+
+
+	<!-- CLEAN UI ADMIN TEMPLATE MODULES-->
+	<!-- v2.0.0 -->
+	<link rel="stylesheet" type="text/css" href="modules/core/common/core.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/vendors/common/vendors.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/layouts/common/layouts-pack.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/themes/common/themes.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/menu-left/common/menu-left.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/menu-right/common/menu-right.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/top-bar/common/top-bar.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/footer/common/footer.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/pages/common/pages.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/ecommerce/common/ecommerce.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/apps/common/apps.cleanui.css">
+	<script src="modules/menu-left/common/menu-left.cleanui.js"></script>
+	<script src="modules/menu-right/common/menu-right.cleanui.js"></script>
+	<!-- <script src="/js/system_js.js"></script>  небыло в архиве -->
+
+
+	<!-- include summernote css/js-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+	<!-- <script src="/js/editor.js"></script>  небыло в архиве-->
+
+	<!-- its new css -->
+
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+
+<body class="cat__config--vertical cat__menu-left--colorful cat__menu-left--visible">
+
+	<nav class="cat__menu-left">
+		<div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
+			<div class="cat__menu-left__pin-button">
+				<div>
+					<!-- -->
+				</div>
+			</div>
+		</div>
+		<!--<div class="cat__menu-left__logo">
+        <a href="dashboards-alpha.html">
+            <img src="modules/dummy-assets/common/img/logo-inverse.png" />
+        </a>
+    </div>-->
+		<div class="cat__menu-left__inner">
+			<ul class="cat__menu-left__list cat__menu-left__list--root">
+				<li class="cat__menu-left__item cat__menu-left__item--active">
+					<a href="/admin55">
+						<span class="cat__menu-left__icon icmn-home"></span>
+						Dashboard
+					</a>
+
+
+				<li class="cat__menu-left__item cat__menu-left__item">
+					<a href="/admin55/confirmation/exchange">
+						<span class="cat__menu-left__icon fa fa-exchange"></span>
+						Проверка заказа
+					</a>
+				</li>
+
+
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+				<li class="cat__menu-left__item cat__menu-left__submenu">
+					<a href="javascript: void(0);">
+						<span class="cat__menu-left__icon fa fa-user"></span>
+						Управ. пользователями
+					</a>
+					<ul class="cat__menu-left__list">
+						<li class="cat__menu-left__item"><a href="/admin55/edit/users"> Пользователи</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/user_type"> Уровни пользователей</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/admin_pages"> Админ панели</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/admin_law"> Доступы к админ.панели</a></li>
+
+					</ul>
+				</li>
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+
+
+				<li class="cat__menu-left__item cat__menu-left__submenu">
+					<a href="javascript: void(0);">
+						<span class="cat__menu-left__icon fa fa-desktop"></span>
+						Сайт
+					</a>
+					<ul class="cat__menu-left__list">
+						<li class="cat__menu-left__item"><a href="/admin55/edit/exchange"> Все заявки</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/post"> Страницы</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/valut"> Валюты</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/valut_rates"> Курсы и комиссии</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/options"> Настройки</a></li>
+
+					</ul>
+				</li>
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+				<!--<li class="cat__menu-left__item cat__menu-left__item">
+                <a href="rates.html">
+				    <span class="cat__menu-left__icon fa fa-btc"></span>
+                    Курсы валют
+                </a>
+            </li>-->
+
+				<li class="cat__menu-left__item cat__menu-left__item">
+					<a href="/admin55/page/ref_vods">
+						<span class="cat__menu-left__icon fa fa-sitemap"></span>
+						Рефоводы
+					</a>
+				</li>
+				<li class="cat__menu-left__item cat__menu-left__item ">
+					<a href="/logout">
+						<span class="cat__menu-left__icon icmn-home"></span>
+						Выйти
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="cat__top-bar">
+		<!-- left aligned items -->
+		<div class="cat__top-bar__left">
+			<div class="cat__top-bar__logo">
+				<!-- <a href="dashboards-alpha.html">
+					<img src="modules/dummy-assets/common/img/logo.png" />
+				</a> -->
+			</div>
+			<div class="part_title fw_bold fz_20">Title of page</div>
+		</div>
+		<!-- right aligned items -->
+	</div>
+	<div class="cat__content">
+		<div class="card">
+			<div class="card-body px-3 py-2 d-flex align-items-center">
+				<p class="mb-0">This is some text <strong>122 123</strong></p>
+				<button class="btn btn-danger ml-auto btn-sm">Close</button>
+			</div>
+		</div>
+		<div class="d-flex justify-content-end mb-3">
+			<button class="btn mx-1 btn-primary btn-sm">Создать новую</button>
+			<button class="btn mx-1 btn-success btn-sm">Поиск заявок</button>
+		</div>
+		<div class="main_col row">
+			<div class="col">
+				<div class="col_title d-flex justify-content-between mb-2">
+					<span class="pr-2">Отображено 1 из 1</span>
+					<a href="#" class="">Отображать по 10 заявок</a>
+				</div>
+				<nav>
+					<ul class="pagination pagination-sm mb-0">
+						<!-- <li class="page-item disabled">
+							<a class="page-link">Previous</a>
+						</li> -->
+						<li class="page-item"><a class="page-link" href="#">1</a></li>
+						<li class="page-item active" aria-current="page">
+							<a class="page-link" href="#">2</a>
+						</li>
+						<li class="page-item"><a class="page-link" href="#">3</a></li>
+						<li class="page-item"><a class="page-link" href="#">4</a></li>
+						<li class="page-item"><a class="page-link" href="#">5</a></li>
+						<li class="page-item"><a class="page-link" href="#">6</a></li>
+						<li class="page-item"><a class="page-link" href="#">7</a></li>
+						<li class="page-item"><a class="page-link" href="#">...</a></li>
+						<li class="page-item"><a class="page-link" href="#">70</a></li>
+						<!-- <li class="page-item">
+							<a class="page-link" href="#">Next</a>
+						</li> -->
+					</ul>
+				</nav>
+				<div class="card">
+					<div class="card-body">
+						<div class="card-header bg-primary text-white py-1 d-flex align-items-center">
+							<span><i class="fa fa-tag" aria-hidden="true"></i> Заявка <span>№1324123</span></span>
+							<a href="#" class="text-white mx-auto">
+								<i class="fa fa-envelope" aria-hidden="true"></i>
+								<span>asd@gmail.com</span>
+								<i class="fa fa-info-circle" aria-hidden="true"></i>
+							</a>
+							<p class="mb-0">
+								<span class="d-block"> дата 1 </span>
+								<span class="d-block"> дата 2</span>
+							</p>
+						</div>
+						<div class="card-block">
+							<div class="row">
+								<div class="col">
+									<div class="row">
+										<div class="col">
+											<div class="d-flex align-items-center pb-3">
+												<div class="ico_label">
+													<img src='img/example.jpg' alt='' />
+												</div>
+												<div class="col-auto pl-2 d-flex align-items-center">
+													<strong class="pr-2">Visa/MasterCard</strong>
+													<ul class="list-unstyled mb-0 d-flex align-content-center">
+														<li class="mx-1">
+															<a href="#" class="text-black fz_18">
+																<i class="fa fa-binoculars" aria-hidden="true"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<ul class="list_inf list-unstyled mb-0">
+												<li class="pb-1">
+													<i class="fz_17">90</i>
+													<span class="text-uppercase text-danger fz_17">usdt</span>
+													<em class="text-muted">123123.12 $</em>
+												</li>
+												<li class="pb-1">
+													<i class="">90</i>
+													<a href="#" class="text-black mx-1">
+														<i class="fa fa-cog" aria-hidden="true"></i>
+													</a>
+													<span class="text-uppercase text-danger ">usdt</span>
+												</li>
+												<li class="pb-1">
+													<i class="">0</i>
+													<a href="#" class="text-black mx-1">
+														<i class="fa fa-cog" aria-hidden="true"></i>
+													</a>
+													<span class="text-uppercase text-danger ">usd</span>
+												</li>
+											</ul>
+											<div class="address">
+												<span class="d-block text-muted">Карта:</span>
+												<span class="d-block word_wrpap">12312312312312312312312312312312312312312313</span>
+											</div>
+										</div>
+										<div class="col-auto px-4">
+											<i class="fa fa-arrow-right text-muted fz_40" aria-hidden="true"></i>
+										</div>
+										<div class="col">
+											<div class="d-flex align-items-center pb-3">
+												<div class="ico_label">
+													<img src='img/example.jpg' alt='' />
+												</div>
+												<div class="col-auto pl-2 d-flex align-items-center">
+													<strong class="pr-2">Visa/MasterCard</strong>
+													<ul class="list-unstyled mb-0 d-flex align-content-center">
+														<li class="mx-1">
+															<a href="#" class="text-black ">
+																<i class="fa fa-cc-visa" aria-hidden="true"></i>
+															</a>
+														</li>
+														<li class="mx-1">
+															<a href="#" class="text-black ">
+																<i class="fa fa-credit-card-alt" aria-hidden="true"></i>
+															</a>
+														</li>
+														<li class="mx-1">
+															<a href="#" class="text-black ">
+																<i class="fa fa-university" aria-hidden="true"></i>
+															</a>
+														</li>
+													</ul>
+												</div>
+											</div>
+											<ul class="list_inf list-unstyled mb-0">
+												<li class="pb-1">
+													<i class="fz_17">90</i>
+													<span class="text-uppercase text-purple fz_17">usdt</span>
+													<em class="text-muted">123123.12 $</em>
+												</li>
+												<li class="pb-1">
+													<i class="text-update">-90</i>
+													<a href="#" class="text-black mx-1">
+														<i class="fa fa-cog" aria-hidden="true"></i>
+													</a>
+													<span class="text-uppercase text-danger ">usdt</span>
+												</li>
+												<li class="pb-1">
+													<i class="">0</i>
+													<a href="#" class="text-black mx-1">
+														<i class="fa fa-cog" aria-hidden="true"></i>
+													</a>
+													<span class="text-uppercase text-danger ">usd</span>
+												</li>
+											</ul>
+											<div class="address">
+												<span class="d-block text-muted">Карта:</span>
+												<span class="d-block word_wrpap">12312312312312312312312312312312312312312313</span>
+											</div>
+										</div>
+									</div>
+									<ul class="message_list list-unstyled mt-4">
+										<li class="d-flex">
+											<span class="message_title bg-primary text-white">
+												<i class="fa fa-money" aria-hidden="true"></i>
+											</span>
+											<div class="col pl-3">
+												<div class="alert alert-light alert_corner">
+													<p class="mb-0 text-gray"><span class="text-primary">Средства поступили
+															09-09-2222 в 12:12:11 |</span> Подтвердил <a href="#">username</a></p>
+												</div>
+											</div>
+										</li>
+										<li class="d-flex">
+											<span class="message_title bg-success text-white">
+												<i class="fa fa-download" aria-hidden="true"></i>
+											</span>
+											<div class="col pl-3 mw_500">
+												<div class="alert alert-success alert_corner">
+													<ul class="list-unstyled mb-0">
+														<li><a href="#">some text = some text</a></li>
+														<li><a href="#">some text some text</a></li>
+														<li><a href="#">some text some text</a></li>
+														<li><a href="#">some text some text</a></li>
+													</ul>
+												</div>
+											</div>
+										</li>
+										<li class="d-flex">
+											<span class="message_title bg-update text-white">
+												<i class="fa fa-comments-o" aria-hidden="true"></i>
+											</span>
+											<div class="col pl-3">
+												<div class="alert alert-update alert_corner">
+													<p class="mb-0">кто-то пиздит бабки...</p>
+												</div>
+											</div>
+										</li>
+										<li class="d-flex">
+											<span class="message_title text-white">
+												<i class="fa fa-telegram" aria-hidden="true"></i>
+											</span>
+											<div class="col pl-3">
+												<div class="alert alert-white alert_corner">
+													<ul class="list-unstyled mb-0">
+														<li><a href="#">adasd asdasd asdasd</a></li>
+														<li><a href="#">adasd asdasd asdasd</a></li>
+														<li><a href="#">adasd asdasd asdasd</a></li>
+														<li>text</li>
+													</ul>
+												</div>
+											</div>
+										</li>
+									</ul>
+								</div>
+								<div class="col col_function">
+									<div class="list-group">
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa fa-snowflake-o mr-2  fa-fw" aria-hidden="true"></i> В замороженные
+										</a>
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa fa-external-link mr-2  fa-fw" aria-hidden="true"></i> В предварительные
+										</a>
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa fa-pencil mr-2  fa-fw" aria-hidden="true"></i> Редактировать
+										</a>
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa fa-square-o mr-2  fa-fw" aria-hidden="true"></i> Тестовая
+										</a>
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa  mr-2 fa-bookmark fa-fw" aria-hidden="true"></i> Метка
+										</a>
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa fa-comments-o mr-2  fa-fw" aria-hidden="true"></i> Комментарий
+										</a>
+										<a href="#" class="list-group-item list-group-item-action ">
+											<i class="fa fa-telegram mr-2  fa-fw" aria-hidden="true"></i> Сообщение
+										</a>
+									</div>
+								</div>
+							</div>
+							<div class="card_footer row align-items-center">
+								<div class="col d-flex align-items-center list_footer">
+									<button class="btn btn-light py-1 px-3">
+										<i class="fa fa-bar-chart" aria-hidden="true"></i>
+									</button>
+									<button class="btn btn-light py-1 px-3">
+										<i class="fa fa-pencil" aria-hidden="true"></i>
+									</button>
+									<button class="btn btn-light py-1 px-3">
+										<i class="fa fa-money" aria-hidden="true"></i>
+									</button>
+									<i class="fa fa-desktop" aria-hidden="true"></i>
+									<i class="fa fa-sitemap text-success" aria-hidden="true"></i>
+									<a href="#" target="_blank" class="">
+										<i class="fa fa-check-circle fz_17" aria-hidden="true"></i>
+										12
+									</a>
+									<span><i class="fa fa-folder-open" aria-hidden="true"></i> 13</span>
+									<span><i class="fa fa-language" aria-hidden="true"></i> En</span>
+									<a href="#" target="_blank">
+										<i class="fa fa-globe" aria-hidden="true"></i>
+										127.0.0.1:5500
+									</a>
+									<span>
+										<i class="fa fa-exchange" aria-hidden="true"></i>
+										<button class="btn btn-link py-0 px-2">0 USDT (%)</button>
+									</span>
+									<a href="#" target="_blank">
+										<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+										счёт
+									</a>
+								</div>
+								<div class="col-auto">
+									<strong class="text-success fz_20">213123 $</strong>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="col fix_right">
+				asd
+			</div>
+		</div>
+	</div>
+</body>
+
+</html>
