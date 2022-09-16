@@ -1,0 +1,66 @@
+:root {
+	--update: #a63ab4;
+}
+
+$update: #a63ab4;
+
+.fw_bold {
+	font-weight: bold;
+}
+
+
+
+.btn-update,
+.bg-update {
+	background: rgba($update, .8);
+	color: #fff;
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: rgba($update, 1);
+	}
+}
+
+// .bg-update {
+// 	background: var(--update);
+// }
+
+.fz_20 {
+	font-size: 20px;
+}
+
+.btn {
+	white-space: normal;
+	cursor: pointer;
+}
+
+.fz_40 {
+	font-size: 40px;
+}
+
+.fix_right {
+	--width: 500px;
+	max-width: var(--width);
+	flex: 0 0 var(--width);
+}
+
+.col_function {
+	--width: 250px;
+	max-width: var(--width);
+	flex: 0 0 var(--width);
+}
+
+.bg-black {
+	background: #000;
+}
+
+a.bg-black {
+	background: rgba(#000, .8);
+
+	&:hover,
+	&:active,
+	&:focus {
+		background: rgba(#000, 1);
+	}
+}
