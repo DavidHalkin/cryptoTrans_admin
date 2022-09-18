@@ -225,7 +225,7 @@
 			<button class="btn mx-1 btn-success btn-sm">Поиск заявок</button>
 		</div>
 		<div class="main_col row">
-			<div class="col">
+			<div class="col-12 col_left_part">
 				<div class="col_title d-flex justify-content-between mb-2">
 					<span class="pr-2">Отображено 1 из 1</span>
 					<a href="#" class="">Отображать по 10 заявок</a>
@@ -274,7 +274,7 @@
 												<div class="ico_label">
 													<img src='img/example.jpg' alt='' />
 												</div>
-												<div class="col-auto pl-2 d-flex align-items-center">
+												<div class="col pl-2 d-flex align-items-center">
 													<strong class="pr-2">Visa/MasterCard</strong>
 													<ul class="list-unstyled mb-0 d-flex align-content-center">
 														<li class="mx-1">
@@ -311,15 +311,15 @@
 												<span class="d-block word_wrpap">12312312312312312312312312312312312312312313</span>
 											</div>
 										</div>
-										<div class="col-auto px-4">
-											<i class="fa fa-arrow-right text-muted fz_40" aria-hidden="true"></i>
+										<div class="col-auto px-4 col_arrow">
+											<i class="fa fa-arrow-right text-muted " aria-hidden="true"></i>
 										</div>
 										<div class="col">
 											<div class="d-flex align-items-center pb-3">
 												<div class="ico_label">
 													<img src='img/example.jpg' alt='' />
 												</div>
-												<div class="col-auto pl-2 d-flex align-items-center">
+												<div class="col pl-2 d-flex align-items-center">
 													<strong class="pr-2">Visa/MasterCard</strong>
 													<ul class="list-unstyled mb-0 d-flex align-content-center">
 														<li class="mx-1">
@@ -421,7 +421,7 @@
 										</li>
 									</ul>
 								</div>
-								<div class="col col_function">
+								<div class="col-12 col_function">
 									<div class="list-group">
 										<a href="#" class="list-group-item list-group-item-action ">
 											<i class="fa fa-snowflake-o mr-2  fa-fw" aria-hidden="true"></i> В замороженные
@@ -448,7 +448,7 @@
 								</div>
 							</div>
 							<div class="card_footer row align-items-center">
-								<div class="col d-flex align-items-center list_footer">
+								<div class="col d-flex flex-wrap align-items-center list_footer">
 									<button class="btn btn-light py-1 px-3">
 										<i class="fa fa-bar-chart" aria-hidden="true"></i>
 									</button>
@@ -487,8 +487,159 @@
 					</div>
 				</div>
 			</div>
-			<div class="col fix_right">
-				asd
+			<div class="col-12 fix_right">
+				<div class="card">
+					<div class="card-body">
+						<ul class="nav nav-tabs nav_tabs" role="tablist">
+							<li class="nav-item" role="presentation">
+								<button class="nav-link " data-toggle="tab" data-target="#tab_1" type="button" role="tab"
+									aria-selected="false">
+									<i class="fa fa-line-chart" aria-hidden="true"></i>
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link active" data-toggle="tab" data-target="#tab_2" type="button" role="tab"
+									aria-selected="true">
+									<i class="fa fa-usd" aria-hidden="true"></i>
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" data-toggle="tab" data-target="#tab_3" type="button" role="tab"
+									aria-selected="false">
+									<i class="fa fa-money" aria-hidden="true"></i>
+								</button>
+							</li>
+							<li class="nav-item" role="presentation">
+								<button class="nav-link" data-toggle="tab" data-target="#tab_4" type="button" role="tab"
+									aria-selected="false">
+									<i class="fa fa-exchange" aria-hidden="true"></i>
+								</button>
+							</li>
+						</ul>
+						<div class="tab-content tab_content">
+							<div class="tab-pane fade" id="tab_1">
+								1
+							</div>
+							<div class="tab-pane fade p-0 show active" id="tab_2">
+								<div class="table-responsive">
+									<table class="table table-hover table_cstm">
+										<thead>
+											<tr>
+												<th>Направление</th>
+												<th>Сумма</th>
+												<th></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
+												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
+												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
+												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
+												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											<tr>
+												<td>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
+												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+							<div class="tab-pane fade" id="tab_3">
+								3
+							</div>
+							<div class="tab-pane fade" id="tab_4">
+								4
+							</div>
+						</div>
+
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
