@@ -479,7 +479,7 @@
 										счёт
 									</a>
 								</div>
-								<div class="col-auto">
+								<div class="col-auto px-3">
 									<strong class="text-success fz_20">213123 $</strong>
 								</div>
 							</div>
@@ -504,7 +504,7 @@
 								</button>
 							</li>
 							<li class="nav-item" role="presentation">
-								<button class="nav-link" data-toggle="tab" data-target="#tab_3" type="button" role="tab"
+								<button class="nav-link " data-toggle="tab" data-target="#tab_3" type="button" role="tab"
 									aria-selected="false">
 									<i class="fa fa-money" aria-hidden="true"></i>
 								</button>
@@ -525,14 +525,42 @@
 									<table class="table table-hover table_cstm">
 										<thead>
 											<tr>
-												<th>Направление</th>
+												<th class="pl-5">Направление</th>
 												<th>Сумма</th>
 												<th></th>
 											</tr>
 										</thead>
 										<tbody>
 											<tr>
+												<td class="pl-5">
+													<a href="#" class="toggle_show toggle_show_js">
+														<i class="fa fa-plus-circle" aria-hidden="true"></i>
+													</a>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
 												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											<tr class="d-none more_info">
+												<td colspan="3" class="pl-3">
+													<p class="mb-2">123123 123123 $</p>
+													<p class="mb-2">123123 $</p>
+												</td>
+											</tr>
+											<tr>
+												<td class="pl-5">
 													<div class="d-flex align-items-center">
 														<div class="ico_label">
 															<img src="img/example.jpg" alt="" class="rounded-circle">
@@ -551,7 +579,37 @@
 												</td>
 											</tr>
 											<tr>
+												<td class="pl-5">
+													<a href="#" class="toggle_show toggle_show_js">
+														<i class="fa fa-plus-circle" aria-hidden="true"></i>
+													</a>
+													<div class="d-flex align-items-center">
+														<div class="ico_label">
+															<img src="img/example.jpg" alt="" class="rounded-circle">
+														</div>
+														<div class="pl-2 txt col">
+															<span>Bitcoin Money USD</span>
+														</div>
+													</div>
+													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
+												</td>
 												<td>
+													<span class="text-muted">123123 USD</span>
+												</td>
+												<td class="text-right">
+													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
+												</td>
+											</tr>
+											<tr class="d-none more_info">
+												<td colspan="3" class="pl-3">
+													Lorem, ipsum dolor sit amet consectetur adipisicing elit. Eos nulla debitis sunt,
+													perferendis dolor modi voluptate voluptatem dolorem necessitatibus ea amet
+													commodi temporibus. Perferendis reiciendis doloremque perspiciatis quod
+													consectetur necessitatibus.
+												</td>
+											</tr>
+											<tr>
+												<td class="pl-5">
 													<div class="d-flex align-items-center">
 														<div class="ico_label">
 															<img src="img/example.jpg" alt="" class="rounded-circle">
@@ -570,7 +628,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td>
+												<td class="pl-5">
 													<div class="d-flex align-items-center">
 														<div class="ico_label">
 															<img src="img/example.jpg" alt="" class="rounded-circle">
@@ -589,26 +647,7 @@
 												</td>
 											</tr>
 											<tr>
-												<td>
-													<div class="d-flex align-items-center">
-														<div class="ico_label">
-															<img src="img/example.jpg" alt="" class="rounded-circle">
-														</div>
-														<div class="pl-2 txt col">
-															<span>Bitcoin Money USD</span>
-														</div>
-													</div>
-													<span class="data pt-1 d-block fz_11 text-muted">12.12.1222 22:12:01</span>
-												</td>
-												<td>
-													<span class="text-muted">123123 USD</span>
-												</td>
-												<td class="text-right">
-													<a href="#"><i class="fa fa-refresh" aria-hidden="true"></i></a>
-												</td>
-											</tr>
-											<tr>
-												<td>
+												<td class="pl-5">
 													<div class="d-flex align-items-center">
 														<div class="ico_label">
 															<img src="img/example.jpg" alt="" class="rounded-circle">
@@ -630,8 +669,108 @@
 									</table>
 								</div>
 							</div>
-							<div class="tab-pane fade" id="tab_3">
-								3
+							<div class="tab-pane fade pt-2 " id="tab_3">
+								<div class="btn-group pb-2" role="group">
+									<button type="button" class="btn btn-secondary dropdown-toggle btn-sm" data-toggle="dropdown"
+										aria-expanded="false">
+										Приходы/Расходы
+									</button>
+									<div class="dropdown-menu">
+										<a class="dropdown-item" href="#" data-toggle="modal" data-target="#addModal">Приходы</a>
+										<a class="dropdown-item" href="#" data-toggle="modal" data-target="#addModal">Расходы</a>
+									</div>
+								</div>
+
+								<table class="display table table_js" style="width:100%">
+									<thead>
+										<tr>
+											<th class="fz_12">Дата</th>
+											<th class="fz_12">Тип операции</th>
+											<th class="fz_12">Сумма</th>
+											<th class="fz_12">Операции</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td class="fz_12">31.12.2000 13:14:00</td>
+											<td class="fz_12">Зарплата</td>
+											<td class="fz_12">-123123 $</td>
+											<td>
+												<a href="#" class="fz_17 check_btn_js">
+													<i class="fa fa-check-circle" aria-hidden="true"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#exampleModal" class="fz_17">
+													<i class="fa fa-info-circle" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="fz_12">1.12.1999 13:14:00</td>
+											<td class="fz_12">Сервера</td>
+											<td class="text-success fz_12">+12 $</td>
+											<td>
+												<a href="#" class="fz_17 check_btn_js">
+													<i class="fa fa-check-circle" aria-hidden="true"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#exampleModal" class="fz_17">
+													<i class="fa fa-info-circle" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="fz_12">10.12.1999 13:14:00</td>
+											<td class="fz_12">Прочие расходы</td>
+											<td class="text-danger fz_12">-12 $</td>
+											<td>
+												<a href="#" class="fz_17 check_btn_js">
+													<i class="fa fa-check-circle" aria-hidden="true"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#exampleModal" class="fz_17">
+													<i class="fa fa-info-circle" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="fz_12">10.12.1999 13:14:00</td>
+											<td class="fz_12">Прочие расходы</td>
+											<td class="text-danger fz_12">-12 $</td>
+											<td>
+												<a href="#" class="fz_17 check_btn_js">
+													<i class="fa fa-check-circle" aria-hidden="true"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#exampleModal" class="fz_17">
+													<i class="fa fa-info-circle" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="fz_12">10.12.1999 13:14:00</td>
+											<td class="fz_12">Прочие расходы</td>
+											<td class="text-danger fz_12">-12 $</td>
+											<td>
+												<a href="#" class="fz_17 check_btn_js">
+													<i class="fa fa-check-circle" aria-hidden="true"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#exampleModal" class="fz_17">
+													<i class="fa fa-info-circle" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+										<tr>
+											<td class="fz_12">10.12.1999 13:14:00</td>
+											<td class="fz_12">Прочие расходы</td>
+											<td class="text-danger fz_12">-12 $</td>
+											<td>
+												<a href="#" class="fz_17 check_btn_js">
+													<i class="fa fa-check-circle" aria-hidden="true"></i>
+												</a>
+												<a href="#" data-toggle="modal" data-target="#exampleModal" class="fz_17">
+													<i class="fa fa-info-circle" aria-hidden="true"></i>
+												</a>
+											</td>
+										</tr>
+									</tbody>
+								</table>
 							</div>
 							<div class="tab-pane fade" id="tab_4">
 								4
@@ -643,6 +782,268 @@
 			</div>
 		</div>
 	</div>
+	<script src="js/main.js"></script>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Информация об операции</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Тип операции: Зарплата</p>
+					<p>Комментарий:</p>
+					<p>ЗП 123123123</p>
+					<p>Кошелёк: <img src="img/example.jpg" class="mw_20" alt=""> +095-132-123-23</p>
+					<p>Сумма: <span class="text-danger">-123123 $</span></p>
+					<p>Пользователь: <a href="#">@username</a></p>
+					<p>Дат: 12-12-2022 13:23:00</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Добавление прихода</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-6">
+							<div class="form-group">
+								<label>Расход или приход</label>
+								<select class="selectpicker d-flex" data-width="100%" disabled>
+									<option>Расход</option>
+									<option>Приход</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label>Тип операции</label>
+								<select class="selectpicker d-flex" data-live-search="true" data-width="100%"
+									title="Выберите тип операции">
+									<option>Mustard</option>
+									<option>Ketchup</option>
+									<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+										ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+										excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<select class="selectpicker d-flex" data-live-search="true" data-width="100%"
+									title="Выберите тип операции">
+									<option>Mustard</option>
+									<option>Ketchup</option>
+									<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+										ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+										excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="f1">Сумма</label>
+								<input type="text" class="form-control" id="f1" placeholder="">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<label for="g1">Коменнтарий</label>
+								<textarea class="form-control" id="g1" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="label pt-3">Выберите кошелёк</div>
+					<table class="display table table-vertical-middle   unsearch_table_js" style="width:100%">
+						<thead>
+							<tr>
+								<th class="fz_12"></th>
+								<th class="fz_12">Название</th>
+								<th class="fz_12">Резерв</th>
+								<th class="fz_12">Обороты в день</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>3121231231231231231212312312</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12312312
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12312312
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									43
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									3
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>1200</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+
 </body>
 
 </html>

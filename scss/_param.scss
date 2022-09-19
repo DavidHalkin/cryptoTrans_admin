@@ -8,6 +8,13 @@ $update: #a63ab4;
 	font-weight: bold;
 }
 
+a {
+
+	&:focus,
+	&:active {
+		color: #514d6a;
+	}
+}
 
 .text-update {
 	color: $update;
@@ -28,6 +35,10 @@ a.bg-update {
 	&:focus {
 		background: rgba($update, 1) !important;
 	}
+}
+
+.fz_12 {
+	font-size: 12px;
 }
 
 .fz_17 {
@@ -65,6 +76,10 @@ a.bg-update {
 
 .text-gray {
 	color: darken(#ccc, 20%);
+}
+
+.mw_20 {
+	max-width: 20px;
 }
 
 .alert-light {
@@ -206,4 +221,68 @@ a.bg-black {
 			}
 		}
 	}
+}
+
+.table-vertical-middle {
+
+	th,
+	td {
+		vertical-align: middle;
+	}
+}
+
+.bootstrap-select {
+	.btn {
+		display: flex;
+		align-items: center;
+		overflow: hidden;
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		padding-right: 15px;
+	}
+}
+
+.custom_radio {
+	input[type="radio"] {
+		display: none;
+	}
+
+	label {
+		cursor: pointer;
+	}
+
+	em {
+
+		width: 20px;
+		height: 20px;
+		background-color: transparent;
+		border: 2px solid #ccc;
+		border-radius: 50%;
+		display: block;
+		transition: border-color 400ms ease;
+		position: relative;
+	}
+
+	em::after {
+		content: "";
+		position: absolute;
+		width: 20px;
+		height: 20px;
+		background-color: var(--update);
+		border: 2px solid var(--update);
+		border-radius: 50%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%) scale(0);
+		transition: transform 200ms ease;
+	}
+
+	input[type="radio"]:checked+em::before {
+		border-color: var(--update);
+	}
+
+	input[type="radio"]:checked+em::after {
+		transform: translate(-50%, -50%) scale(0.55);
+	}
+
 }
