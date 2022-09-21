@@ -11,10 +11,10 @@
 
 	<!-- VENDORS -->
 	<!-- v2.0.0 -->
-	<link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="vendors/jscrollpane/style/jquery.jscrollpane.css">
 	<link rel="stylesheet" type="text/css" href="vendors/ladda/dist/ladda-themeless.min.css">
-	<link rel="stylesheet" type="text/css" href="vendors/bootstrap-select/dist/css/bootstrap-select.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendors/bootstrap-select/dist/css/bootstrap-select.min.css"> -->
 	<link rel="stylesheet" type="text/css" href="vendors/select2/dist/css/select2.min.css">
 	<link rel="stylesheet" type="text/css"
 		href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
@@ -37,12 +37,12 @@
 	<script src="vendors/jquery/dist/jquery.min.js"></script>
 	<script src="vendors/tether/dist/js/tether.min.js"></script>
 	<script src="vendors/jquery-ui/jquery-ui.min.js"></script>
-	<script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+	<!-- <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
 	<script src="vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
 	<script src="vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
 	<script src="vendors/spin.js/spin.js"></script>
 	<script src="vendors/ladda/dist/ladda.min.js"></script>
-	<script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
+	<!-- <script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script> -->
 	<script src="vendors/select2/dist/js/select2.full.min.js"></script>
 	<script src="vendors/html5-form-validation/dist/jquery.validation.min.js"></script>
 	<script src="vendors/jquery-typeahead/dist/jquery.typeahead.min.js"></script>
@@ -102,11 +102,24 @@
 
 	<!-- its new css -->
 
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom_bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/all.css">
+	<style>
+		h2 {
+			color: #fff;
+		}
+	</style>
 </head>
 
-<body class="p-4" style="background:#3c3434; color:#fff;">
+<body class="p-4" style="background:#3c3434;">
 	<div class="wrapper">
+		<h2>Лайтбоксы</h2>
+		<a href="#" class="btn btn-danger" data-toggle="modal" data-target="#dellModal">удаление заявки</a>
+		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#editModal">редактирование заявки</a>
+		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">информация про операцию</a>
+		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Добавление прихода</a>
+		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#history">история</a>
 		<h2>Панели</h2>
 		<div class="list-group">
 			<a href="#" class="list-group-item list-group-item-action ">
@@ -155,6 +168,7 @@
 			</a>
 		</div>
 		<br>
+		<h2>Алерты</h2>
 		<div class="alert alert-danger alert_corner mw_500">
 			<p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, quibusdam cumque. Minima quisquam
 				facere rerum dolorum ipsa exercitationem sit necessitatibus iure minus itaque inventore ipsum, architecto
@@ -211,6 +225,456 @@
 				ipsum, architecto magnam explicabo mollitia quibusdam!</p>
 		</div>
 	</div>
+	<h2>Селект с лив-серчем. убрать - см атрибуты</h2>
+	<select class="selectpicker d-flex" data-live-search="true" data-width="100%" title="Выберите тип операции">
+		<option>Mustard</option>
+		<option>Ketchup</option>
+		<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+			ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+			excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+	</select>
+	<!-- Modal -->
+	<div class="modal fade" id="dellModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Удалление заявки</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<label class="text-muted">Причина удаления</label>
+					<ul class="list-unstyled">
+						<li class="pb-2">
+							<div class="custom-control custom-radio">
+								<input type="radio" class="custom-control-input" id="h1" name="radio-stacked">
+								<label class="custom-control-label" for="h1">Своя причина:</label>
+							</div>
+						</li>
+						<li class="pb-2">
+							<div class="custom-control custom-radio">
+								<input type="radio" class="custom-control-input" id="h2" name="radio-stacked">
+								<label class="custom-control-label" for="h2">Своя причина:</label>
+							</div>
+						</li>
+						<li class="pb-2">
+							<div class="custom-control custom-radio">
+								<input type="radio" class="custom-control-input" id="h3" name="radio-stacked">
+								<label class="custom-control-label" for="h3">Lorem ipsum dolor sit amet consectetur adipisicing
+									elit. Magnam, voluptatem, dignissimos nesciunt placeat est sint porro voluptate ullam neque
+									cupiditate architecto odit obcaecati aliquam totam quasi corrupti facilis esse
+									tempore.</label>
+							</div>
+						</li>
+						<li class="pb-2">
+							<div class="custom-control custom-radio">
+								<input type="radio" class="custom-control-input" id="h4" name="radio-stacked">
+								<label class="custom-control-label" for="h4">Своя причина:</label>
+							</div>
+						</li>
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-danger" data-dismiss="modal">Dell</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Редактирование заявки №12321312</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row">
+						<div class="col-6 pb-3">
+							<h5 class="text-center text-success">Откуда</h5>
+							<div class="form-group">
+								<label>Направление откуда</label>
+								<select class="selectpicker d-flex" data-width="100%">
+									<option>Расход</option>
+									<option>Приход</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6 pb-3">
+							<h5 class="text-center text-success">Куда</h5>
+							<div class="form-group">
+								<label>Направление куда</label>
+								<select class="selectpicker d-flex" data-live-search="true" data-width="100%"
+									title="Выберите тип операции">
+									<option>Mustard</option>
+									<option>Ketchup</option>
+									<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+										ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+										excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+								</select>
+							</div>
+							<div class="form-group">
+								<label for="f1as">Кошелёк</label>
+								<input type="text" class="form-control" id="f1as" placeholder="">
+							</div>
+						</div>
+						<div class="col-6 pb-3">
+							<h5 class="text-center text-success">Сумма к отправке</h5>
+							<div class="form-group">
+								<label for="ffff">Сумма</label>
+								<input type="text" class="form-control" id="ffff" placeholder="">
+							</div>
+						</div>
+						<div class="col-6 pb-3">
+							<h5 class="text-center text-success">Сумма к получению</h5>
+							<div class="form-group">
+								<label for="aaaa">Сумма</label>
+								<input type="text" class="form-control" id="aaaa" placeholder="">
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal">Edit</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Информация об операции</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<p>Тип операции: Зарплата</p>
+					<p>Комментарий:</p>
+					<p>ЗП 123123123</p>
+					<p>Кошелёк: <img src="img/example.jpg" class="mw_20" alt=""> +095-132-123-23</p>
+					<p>Сумма: <span class="text-danger">-123123 $</span></p>
+					<p>Пользователь: <a href="#">@username</a></p>
+					<p>Дат: 12-12-2022 13:23:00</p>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="addModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Добавление прихода</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="row align-items-end">
+						<div class="col-6">
+							<div class="form-group">
+								<label>Расход или приход</label>
+								<select class="selectpicker d-flex" data-width="100%" disabled>
+									<option>Расход</option>
+									<option>Приход</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label>Тип операции</label>
+								<select class="selectpicker d-flex" data-live-search="true" data-width="100%"
+									title="Выберите тип операции">
+									<option>Mustard</option>
+									<option>Ketchup</option>
+									<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+										ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+										excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<select class="selectpicker d-flex" data-live-search="true" data-width="100%"
+									title="Выберите тип операции">
+									<option>Mustard</option>
+									<option>Ketchup</option>
+									<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+										ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+										excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+								</select>
+							</div>
+						</div>
+						<div class="col-6">
+							<div class="form-group">
+								<label for="f1">Сумма</label>
+								<input type="text" class="form-control" id="f1" placeholder="">
+							</div>
+						</div>
+						<div class="col-12">
+							<div class="form-group">
+								<label for="g1">Коменнтарий</label>
+								<textarea class="form-control" id="g1" rows="3"></textarea>
+							</div>
+						</div>
+					</div>
+					<div class="label pt-3">Выберите кошелёк</div>
+					<table class="display table table-vertical-middle   unsearch_table_js" style="width:100%">
+						<thead>
+							<tr>
+								<th class="fz_12"></th>
+								<th class="fz_12">Название</th>
+								<th class="fz_12">Резерв</th>
+								<th class="fz_12">Обороты в день</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>3121231231231231231212312312</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12312312
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12312312
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									43
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									3
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>1200</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal">Save</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="history" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">История изменений</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul class="message_list list-unstyled mt-4">
+						<li class="d-flex">
+							<span class="message_title text-white">
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</span>
+							<div class="col pl-3">
+								<div class="alert alert-light alert_corner">
+									<p class="text-success mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Praesentium ratione ipsa nulla assumenda quas dolorum unde quae </p>
+									<p class="text-success mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Praesentium ratione ipsa nulla assumenda quas dolorum unde quae </p>
+									<p class="mb-0 text-gray"> Автор <a href="#">username</a> 12.12.2222 12:00:12</p>
+								</div>
+							</div>
+						</li>
+						<li class="d-flex">
+							<span class="message_title text-white">
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</span>
+							<div class="col pl-3">
+								<div class="alert alert-light alert_corner">
+									<p class="text-success mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Praesentium ratione ipsa nulla assumenda quas dolorum unde quae </p>
+									<p class="text-success mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Praesentium ratione ipsa nulla assumenda quas dolorum unde quae </p>
+									<p class="mb-0 text-gray"> Автор <a href="#">username</a> 12.12.2222 12:00:12</p>
+								</div>
+							</div>
+						</li>
+						<li class="d-flex">
+							<span class="message_title text-white">
+								<i class="fa fa-pencil" aria-hidden="true"></i>
+							</span>
+							<div class="col pl-3">
+								<div class="alert alert-light alert_corner">
+									<p class="text-success mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Praesentium ratione ipsa nulla assumenda quas dolorum unde quae </p>
+									<p class="text-success mb-2">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+										Praesentium ratione ipsa nulla assumenda quas dolorum unde quae </p>
+									<p class="mb-0 text-gray"> Автор <a href="#">username</a> 12.12.2222 12:00:12</p>
+								</div>
+							</div>
+						</li>
+
+					</ul>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/main.js"></script>
+	<!-- <script>
+		$('#editModal').modal('show');
+
+	</script> -->
 </body>
 
 </html>

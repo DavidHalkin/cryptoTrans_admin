@@ -1,5 +1,8 @@
-@import '_param';
-
+@import '_custom_bootstrap_vatiables.scss',
+'../bower_components/bootstrap/scss/_functions.scss',
+'../bower_components/bootstrap/scss/_variables.scss',
+'../bower_components/bootstrap/scss/_mixins.scss',
+'_param';
 
 @media screen and (min-width: 1300px) {
 	.fix_right {
@@ -43,15 +46,23 @@
 
 			.list-group-item {
 				display: inline-flex;
+				align-items: center;
 				width: auto;
 				padding: 4px 7px;
 				margin: 2px;
+				border: 1px solid #ccc;
+				border-radius: 3px;
+
 			}
 		}
 	}
 }
 
-
+.small_btns {
+	a {
+		line-height: 1;
+	}
+}
 
 .ico_label {
 	--width: 30px;
@@ -249,8 +260,18 @@ div.dataTables_wrapper div.dataTables_filter label {
 	}
 }
 
-// .select_row {
-// 	td {
-// 		cursor: pointer;
-// 	}
-// }
+.list_info_user {
+	li {
+		display: flex;
+		padding-bottom: 5px;
+
+		.l_part {
+			--size: 150px;
+			padding-right: 15px;
+			max-width: var(--size);
+			flex: 0 0 var(--size);
+		}
+	}
+}
+
+// 3:28

@@ -1,0 +1,16 @@
+{
+  "name": "admin",
+  "version": "1.0.0",
+  "description": "markup",
+  "main": "index.js",
+  "authors": [
+    "DavidHalkin"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "dependencies": {
+    "bootstrap": "^4.6.2",
+    "bootstrap-select": "^1.13.18"
+  },
+  "devDependencies": {}
+}
