@@ -58,6 +58,15 @@ document.addEventListener('DOMContentLoaded', () => {
 		bLengthChange: false,
 		// paging: false,
 	});
+	// unsearch_table_long_js
+	$('.unsearch_table_long_js').DataTable({
+		scrollCollapse: true,
+		bFilter: false,
+		bLengthChange: false,
+		"info": false,
+		paging: false,
+		rowReorder: true
+	});
 	$(document).on('shown.bs.tab', '[data-toggle="tab"]', function (e) {
 		$.fn.dataTable.tables({
 			visible: true,

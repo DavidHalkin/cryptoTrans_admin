@@ -102,7 +102,7 @@
 
 	<!-- its new css -->
 
-	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" <link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
 	<link rel="stylesheet" type="text/css" href="css/custom_bootstrap.css">
 	<link rel="stylesheet" type="text/css" href="css/all.css">
 	<style>
@@ -120,6 +120,8 @@
 		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal">информация про операцию</a>
 		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addModal">Добавление прихода</a>
 		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#history">история</a>
+		<a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#edit_table">редактирование в
+			таблице</a>
 		<h2>Панели</h2>
 		<div class="list-group">
 			<a href="#" class="list-group-item list-group-item-action ">
@@ -668,13 +670,236 @@
 			</div>
 		</div>
 	</div>
+	<!-- Modal -->
+	<div class="modal fade" id="edit_table" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-primary text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Курсы QIWI -> BTC</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<ul class="nav nav-tabs nav_tabs" role="tablist">
+						<li class="nav-item" role="presentation">
+							<button class="nav-link  text-uppercase" data-toggle="tab" data-target="#tab_1" type="button"
+								role="tab" aria-selected="false">
+								рейтинг
+							</button>
+						</li>
+						<li class="nav-item" role="presentation">
+							<button class="nav-link  text-uppercase active" data-toggle="tab" data-target="#tab_2"
+								type="button" role="tab" aria-selected="true">
+								правка
+							</button>
+						</li>
+					</ul>
+					<div class="tab-content tab_content">
+						<div class="tab-pane fade  p-0" id="tab_1">
+							<p class="py-3">Дата обновления ретйинга 2022:12:12 15:17:11</p>
+							<table class="display table hovered unsearch_table_long_js" style="width:100%">
+								<thead>
+									<tr>
+										<th class="fz_12">#</th>
+										<th class="fz_12">Обменник</th>
+										<th class="fz_12">Отдаете</th>
+										<th class="fz_12">Получаете</th>
+										<th class="fz_12">Коммисия</th>
+										<th class="fz_12">Резерв</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td class="fz_12">1</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">1123123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">2</td>
+										<td class="fz_12">бенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr class="table-info">
+										<td class="fz_12">3</td>
+										<td class="fz_12">addd to TR class="table-info"</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">4</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">5</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">6</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">7</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">8</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">9</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">10</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">11</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">12</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">13</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">14</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">15</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">16</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+									<tr>
+										<td class="fz_12">17</td>
+										<td class="fz_12">1Обенник</td>
+										<td class="fz_12">112123.213</td>
+										<td class="fz_12">1</td>
+										<td class="fz_12">12%</td>
+										<td class="fz_12">1.123</td>
+									</tr>
+								</tbody>
+							</table>
+							<div class="modal-footer p-0 pt-3">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+							</div>
+						</div>
+						<div class="tab-pane fade p-0 pt-4 show active" id="tab_2">
+							<div class="row">
+								<div class="col-6">
+									<div class="form-group mb-4">
+										<label for="f1g">Курс</label>
+										<input type="text" class="form-control" id="f1g" placeholder="" value="123.23213">
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="custom-control custom-checkbox mt-4">
+										<input type="checkbox" class="custom-control-input" id="customCheck1">
+										<label class="custom-control-label" for="customCheck1">Автообновление</label>
+									</div>
+								</div>
+								<div class="col-12">
+									<div class="form-group mb-4">
+										<label for="f1gg">Коммисия</label>
+										<input type="text" class="form-control" id="f1gg" placeholder="" value="12.32">
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group mb-4">
+										<label for="j5">Верхняя граница</label>
+										<input type="text" class="form-control" id="j5" placeholder="" value="12.32">
+									</div>
+								</div>
+								<div class="col-6">
+									<div class="form-group mb-4">
+										<label for="j51">Нижняя граница</label>
+										<input type="text" class="form-control" id="j51" placeholder="" value="0">
+									</div>
+								</div>
+							</div>
+							<div class="modal-footer p-0 pt-3">
+								<button type="button" class="btn btn-success" data-dismiss="modal">Сохранить</button>
+							</div>
+						</div>
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</div>
+
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
+	<script src="js/dataTables.rowReorder.min.js"></script>
 	<script src="js/main.js"></script>
-	<!-- <script>
-		$('#editModal').modal('show');
-
-	</script> -->
 </body>
 
 </html>
