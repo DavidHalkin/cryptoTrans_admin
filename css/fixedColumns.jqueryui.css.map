@@ -1,1 +1,1 @@
-{"version":3,"sources":["../vendors/datatables-fixedcolumns/css/fixedColumns.jqueryui.scss"],"names":[],"mappings":"AACA,2EAEC,SAAA,CAEA,+FACC,kBAAA","file":"fixedColumns.jqueryui.css"}
+{"version":3,"sourceRoot":"","sources":["../vendors/datatables-fixedcolumns/css/fixedColumns.jqueryui.scss"],"names":[],"mappings":"AACA,2EAEC,UAEA,+FACC","file":"fixedColumns.jqueryui.css"}
