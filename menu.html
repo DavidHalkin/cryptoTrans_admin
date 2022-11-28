@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+	<meta http-equiv="x-ua-compatible" content="ie=edge">
+	<title>Админ панель обменника </title>
+	<link href="modules/core/common/img/favicon.ico" rel="shortcut icon">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:400,400i,700,700i" rel="stylesheet">
+
+	<!-- VENDORS -->
+	<!-- v2.0.0 -->
+	<!-- <link rel="stylesheet" type="text/css" href="vendors/bootstrap/dist/css/bootstrap.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="vendors/jscrollpane/style/jquery.jscrollpane.css">
+	<link rel="stylesheet" type="text/css" href="vendors/ladda/dist/ladda-themeless.min.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendors/bootstrap-select/dist/css/bootstrap-select.min.css"> -->
+	<link rel="stylesheet" type="text/css" href="vendors/select2/dist/css/select2.min.css">
+	<link rel="stylesheet" type="text/css"
+		href="vendors/eonasdan-bootstrap-datetimepicker/build/css/bootstrap-datetimepicker.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/fullcalendar/dist/fullcalendar.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/bootstrap-sweetalert/dist/sweetalert.css">
+	<link rel="stylesheet" type="text/css" href="vendors/summernote/dist/summernote.css">
+	<link rel="stylesheet" type="text/css" href="vendors/owl.carousel/dist/assets/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/ionrangeslider/css/ion.rangeSlider.css">
+	<!-- <link rel="stylesheet" type="text/css" href="vendors/datatables/media/css/dataTables.bootstrap4.css"> -->
+	<link rel="stylesheet" type="text/css" href="vendors/c3/c3.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/chartist/dist/chartist.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/nprogress/nprogress.css">
+	<link rel="stylesheet" type="text/css" href="vendors/jquery-steps/demo/css/jquery.steps.css">
+	<link rel="stylesheet" type="text/css" href="vendors/dropify/dist/css/dropify.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/font-linearicons/style.css">
+	<link rel="stylesheet" type="text/css" href="vendors/font-icomoon/style.css">
+	<link rel="stylesheet" type="text/css" href="vendors/font-awesome/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="vendors/cleanhtmlaudioplayer/src/player.css">
+	<link rel="stylesheet" type="text/css" href="vendors/cleanhtmlvideoplayer/src/player.css">
+	<script src="vendors/jquery/dist/jquery.min.js"></script>
+	<script src="vendors/tether/dist/js/tether.min.js"></script>
+	<script src="vendors/jquery-ui/jquery-ui.min.js"></script>
+	<!-- <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
+	<script src="vendors/jquery-mousewheel/jquery.mousewheel.min.js"></script>
+	<script src="vendors/jscrollpane/script/jquery.jscrollpane.min.js"></script>
+	<script src="vendors/spin.js/spin.js"></script>
+	<script src="vendors/ladda/dist/ladda.min.js"></script>
+	<!-- <script src="vendors/bootstrap-select/dist/js/bootstrap-select.min.js"></script> -->
+	<script src="vendors/select2/dist/js/select2.full.min.js"></script>
+	<script src="vendors/html5-form-validation/dist/jquery.validation.min.js"></script>
+	<script src="vendors/jquery-typeahead/dist/jquery.typeahead.min.js"></script>
+	<script src="vendors/jquery-mask-plugin/dist/jquery.mask.min.js"></script>
+	<script src="vendors/autosize/dist/autosize.min.js"></script>
+	<script src="vendors/bootstrap-show-password/bootstrap-show-password.min.js"></script>
+	<script src="vendors/moment/min/moment.min.js"></script>
+	<script src="vendors/eonasdan-bootstrap-datetimepicker/build/js/bootstrap-datetimepicker.min.js"></script>
+	<script src="vendors/fullcalendar/dist/fullcalendar.min.js"></script>
+	<script src="vendors/bootstrap-sweetalert/dist/sweetalert.min.js"></script>
+	<script src="vendors/remarkable-bootstrap-notify/dist/bootstrap-notify.min.js"></script>
+	<script src="vendors/summernote/dist/summernote.min.js"></script>
+	<script src="vendors/owl.carousel/dist/owl.carousel.min.js"></script>
+	<script src="vendors/ionrangeslider/js/ion.rangeSlider.min.js"></script>
+	<script src="vendors/nestable/jquery.nestable.js"></script>
+	<!-- <script src="vendors/datatables/media/js/jquery.dataTables.min.js"></script>
+	<script src="vendors/datatables/media/js/dataTables.bootstrap4.js"></script> -->
+	<!-- <script src="vendors/datatables-fixedcolumns/js/dataTables.fixedColumns.js"></script> -->
+	<!-- <script src="vendors/datatables-responsive/js/dataTables.responsive.js"></script> -->
+	<script src="vendors/editable-table/mindmup-editabletable.js"></script>
+	<script src="vendors/d3/d3.min.js"></script>
+	<script src="vendors/c3/c3.min.js"></script>
+	<script src="vendors/chartist/dist/chartist.min.js"></script>
+	<script src="vendors/peity/jquery.peity.min.js"></script>
+	<script src="vendors/chartist-plugin-tooltip/dist/chartist-plugin-tooltip.min.js"></script>
+	<script src="vendors/jquery-countTo/jquery.countTo.js"></script>
+	<script src="vendors/nprogress/nprogress.js"></script>
+	<script src="vendors/jquery-steps/build/jquery.steps.min.js"></script>
+	<script src="vendors/chart.js/dist/Chart.bundle.min.js"></script>
+	<script src="vendors/dropify/dist/js/dropify.min.js"></script>
+	<script src="vendors/cleanhtmlaudioplayer/src/jquery.cleanaudioplayer.js"></script>
+	<script src="vendors/cleanhtmlvideoplayer/src/jquery.cleanvideoplayer.js"></script>
+
+
+
+	<!-- CLEAN UI ADMIN TEMPLATE MODULES-->
+	<!-- v2.0.0 -->
+	<link rel="stylesheet" type="text/css" href="modules/core/common/core.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/vendors/common/vendors.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/layouts/common/layouts-pack.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/themes/common/themes.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/menu-left/common/menu-left.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/menu-right/common/menu-right.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/top-bar/common/top-bar.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/footer/common/footer.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/pages/common/pages.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/ecommerce/common/ecommerce.cleanui.css">
+	<link rel="stylesheet" type="text/css" href="modules/apps/common/apps.cleanui.css">
+	<script src="modules/menu-left/common/menu-left.cleanui.js"></script>
+	<script src="modules/menu-right/common/menu-right.cleanui.js"></script>
+	<!-- <script src="/js/system_js.js"></script>  небыло в архиве -->
+
+
+	<!-- include summernote css/js-->
+	<link href="https://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.8/summernote.css" rel="stylesheet">
+	<!-- <script src="/js/editor.js"></script>  небыло в архиве-->
+
+	<!-- its new css -->
+
+	<link rel="stylesheet" type="text/css" href="css/bootstrap-select.min.css">
+	<link rel="stylesheet" type="text/css" href="css/custom_bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.dataTables.min.css">
+	<link rel="stylesheet" type="text/css" href="css/all.css">
+</head>
+
+<body class="cat__config--vertical cat__menu-left--colorful cat__menu-left--visible">
+
+	<nav class="cat__menu-left">
+		<div class="cat__menu-left__lock cat__menu-left__action--menu-toggle">
+			<div class="cat__menu-left__pin-button">
+				<div>
+					<!-- -->
+				</div>
+			</div>
+		</div>
+		<!--<div class="cat__menu-left__logo">
+        <a href="dashboards-alpha.html">
+            <img src="modules/dummy-assets/common/img/logo-inverse.png" />
+        </a>
+    </div>-->
+		<div class="cat__menu-left__inner">
+			<ul class="cat__menu-left__list cat__menu-left__list--root">
+				<li class="cat__menu-left__item cat__menu-left__item--active">
+					<a href="/admin55">
+						<span class="cat__menu-left__icon icmn-home"></span>
+						Dashboard
+					</a>
+
+
+				<li class="cat__menu-left__item cat__menu-left__item">
+					<a href="/admin55/confirmation/exchange">
+						<span class="cat__menu-left__icon fa fa-exchange"></span>
+						Проверка заказа
+					</a>
+				</li>
+
+
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+				<li class="cat__menu-left__item cat__menu-left__submenu">
+					<a href="javascript: void(0);">
+						<span class="cat__menu-left__icon fa fa-user"></span>
+						Управ. пользователями
+					</a>
+					<ul class="cat__menu-left__list">
+						<li class="cat__menu-left__item"><a href="/admin55/edit/users"> Пользователи</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/user_type"> Уровни пользователей</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/admin_pages"> Админ панели</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/admin_law"> Доступы к админ.панели</a></li>
+
+					</ul>
+				</li>
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+
+
+				<li class="cat__menu-left__item cat__menu-left__submenu">
+					<a href="javascript: void(0);">
+						<span class="cat__menu-left__icon fa fa-desktop"></span>
+						Сайт
+					</a>
+					<ul class="cat__menu-left__list">
+						<li class="cat__menu-left__item"><a href="/admin55/edit/exchange"> Все заявки</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/post"> Страницы</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/valut"> Валюты</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/valut_rates"> Курсы и комиссии</a></li>
+						<li class="cat__menu-left__item"><a href="/admin55/edit/options"> Настройки</a></li>
+
+					</ul>
+				</li>
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+
+				<li class="cat__menu-left__divider">
+					<!-- -->
+				</li>
+				<!--<li class="cat__menu-left__item cat__menu-left__item">
+                <a href="rates.html">
+				    <span class="cat__menu-left__icon fa fa-btc"></span>
+                    Курсы валют
+                </a>
+            </li>-->
+
+				<li class="cat__menu-left__item cat__menu-left__item">
+					<a href="/admin55/page/ref_vods">
+						<span class="cat__menu-left__icon fa fa-sitemap"></span>
+						Рефоводы
+					</a>
+				</li>
+				<li class="cat__menu-left__item cat__menu-left__item ">
+					<a href="/logout">
+						<span class="cat__menu-left__icon icmn-home"></span>
+						Выйти
+					</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div class="cat__top-bar">
+		<!-- left aligned items -->
+		<div class="cat__top-bar__left">
+			<div class="cat__top-bar__logo">
+				<!-- <a href="dashboards-alpha.html">
+					<img src="modules/dummy-assets/common/img/logo.png" />
+				</a> -->
+			</div>
+			<div class="part_title fw_bold fz_20">Valut</div>
+		</div>
+		<!-- right aligned items -->
+	</div>
+	<div class="cat__content">
+
+		<div class="main_col row mx-n2">
+			<div class="sidebar_container px-2">
+				<ul class="sidebar_list list-unstyled mb-0">
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold <span class="badge badge-danger">1</span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li class="active">
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Lorem ipsum dolor sit amet consectetur adipisicing elit</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Lorem ipsum dolor sit amet consectetur <span
+									class="badge badge-danger">1</span></span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+					<li>
+						<a href="#" class="d-flex align-items-center">
+							<em class="ico"><img src="https://picsum.photos/200" alt="" class="rounded-circle img-fluid"></em>
+							<span class="col pl-2 pr-0">Bitcoin Gold</span>
+						</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-12 col_left_part px-2">
+				Lorem, ipsum dolor sit amet consectetur adipisicing elit. Rerum, excepturi ad voluptatum ducimus dolor
+				aliquam laudantium reiciendis non vel, pariatur maxime minus et expedita recusandae distinctio eius rem,
+				officia quas.
+			</div>
+		</div>
+	</div>
+
+	<script src="js/bootstrap.bundle.min.js"></script>
+	<script src="js/bootstrap-select.min.js"></script>
+
+	<script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.fixedColumns.min.js"></script>
+
+	<script src="js/main.js"></script>
+
+
+	<script>
+		$(document).ready(function () {
+			var table = $('#example').DataTable({
+				scrollY: "200px",
+				scrollX: true,
+				scrollCollapse: true,
+				paging: false,
+				"ordering": false,
+				"searching": false,
+				"stripeClasses": [],
+				fixedColumns: {
+					left: 1
+				}
+			});
+		});
+	</script>
+</body>
+
+</html>
