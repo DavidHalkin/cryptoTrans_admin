@@ -358,3 +358,13 @@ table.dataTable td.reorder {
 	text-align: center;
 	cursor: move
 }
+
+.tdn {
+	&:hover {
+		text-decoration: none;
+	}
+}
+
+.word-wrap {
+	word-break: break-all;
+}

@@ -123,6 +123,7 @@
 		<a href="#" class="btn btn-primary" data-toggle="modal" data-target="#history">история</a>
 		<a href="#" class="btn btn-outline-danger" data-toggle="modal" data-target="#edit_table">редактирование в
 			таблице</a>
+		<a href="#" class="btn btn-danger" data-toggle="modal" data-target="#chooseWallet">списание денег</a>
 		<h2>Панели</h2>
 		<div class="list-group">
 			<a href="#" class="list-group-item list-group-item-action ">
@@ -896,7 +897,202 @@
 			</div>
 		</div>
 	</div>
-
+	<!-- Modal -->
+	<div class="modal fade" id="chooseWallet" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal-dialog modal-lg">
+			<div class="modal-content">
+				<div class="modal-header bg-success text-white">
+					<h5 class="modal-title" id="exampleModalLabel">Выберите кошелёк, с которого спишутся деньги</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<label>Направление</label>
+					<select class="selectpicker d-flex" data-live-search="true" data-width="100%"
+						title="Выберите тип операции">
+						<option>QIWI RUB - USD</option>
+						<option>Ketchup</option>
+						<option>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam consequatur eos,
+							ipsam quaerat quia nihil sit corrupti voluptatibus fuga nisi! Repellat quasi minima
+							excepturi ea. Quisquam harum numquam adipisci accusamus!</option>
+					</select>
+					<h4 class="text-danger py-3">Сумма списамния <span>123132 $</span></h4>
+					<table class="display table table-vertical-middle   unsearch_table_js" style="width:100%">
+						<thead>
+							<tr>
+								<th class="fz_12"></th>
+								<th class="fz_12">Название</th>
+								<th class="fz_12">Резерв</th>
+								<th class="fz_12">Обороты в день</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>3121231231231231231212312312</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12312312
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12312312
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									43
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									12
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>12</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+							<tr>
+								<td class="fz_12">
+									<div class="custom_radio">
+										<label class="mb-0 d-block">
+											<input type="radio" class="custom-control-input  " name="radio-stacked">
+											<em></em>
+										</label>
+									</div>
+								</td>
+								<td class="fz_12">
+									<div class="d-flex align-items-center">
+										<div class="ico_label">
+											<img src="img/example.jpg" alt="">
+										</div>
+										<div class="pl-2 txt col ">
+											<span>132324234234324k32j4kj23lk4jlk23j4k23klj4lk23j4lkj23lk4j</span>
+										</div>
+									</div>
+								</td>
+								<td class="fz_12">
+									3
+								</td>
+								<td class="fz_12">
+									<p class="mb-0">
+										<span class="text-success"><i class="fa fa-chevron-up" aria-hidden="true"></i>1200</span>
+										<span class="text-danger">
+											<i class="fa fa-chevron-down" aria-hidden="true"></i>
+											121212</span>
+									</p>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-success" data-dismiss="modal">Списать</button>
+				</div>
+			</div>
+		</div>
+	</div>
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
 	<script src="js/jquery.dataTables.min.js"></script>
