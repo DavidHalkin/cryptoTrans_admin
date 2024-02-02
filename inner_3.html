@@ -673,7 +673,18 @@
 				// 	{ extend: 'remove', editor: editor }
 				// ],
 				columns: [
-					{ data: 'readingOrder', className: 'reorder' },
+					{
+						data: null,
+						render: function (data, type, row, meta) {
+							return '<div class="d-flex align-items-center name_ttl">' +
+								'<div class="ico">' +
+								'<img src="' + data.srcImg + '" alt="">' +
+								'</div>' +
+								'<div class="col pr-0 pl-2 text-left">' + data.title + '</div>' +
+								'</div>';
+						},
+						className: 'reorder title_name'
+					},
 					{ data: 'title' },
 					{ data: 'author' },
 					{
