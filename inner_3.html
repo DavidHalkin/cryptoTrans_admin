@@ -34,7 +34,9 @@
 	<link rel="stylesheet" type="text/css" href="vendors/font-awesome/css/font-awesome.min.css">
 	<link rel="stylesheet" type="text/css" href="vendors/cleanhtmlaudioplayer/src/player.css">
 	<link rel="stylesheet" type="text/css" href="vendors/cleanhtmlvideoplayer/src/player.css">
-	<script src="vendors/jquery/dist/jquery.min.js"></script>
+	<!-- <script src="vendors/jquery/dist/jquery.min.js"></script> -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"
+		integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 	<script src="vendors/tether/dist/js/tether.min.js"></script>
 	<script src="vendors/jquery-ui/jquery-ui.min.js"></script>
 	<!-- <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script> -->
@@ -266,7 +268,7 @@
 						<thead>
 							<tr>
 								<th>name</th>
-								<th class="text-center">
+								<!-- <th class="text-center">
 									<span class="ico_th"><img src="https://picsum.photos/20" alt=""></span>
 								</th>
 								<th class="text-center">
@@ -292,7 +294,7 @@
 								</th>
 								<th class="text-center">
 									<span class="ico_th"><img src="https://picsum.photos/20" alt=""></span>
-								</th>
+								</th> -->
 								<th class="text-center">
 									<span class="ico_th"><img src="https://picsum.photos/20" alt=""></span>
 								</th>
@@ -304,7 +306,7 @@
 								</th>
 							</tr>
 						</thead>
-						<tbody>
+						<!-- <tbody>
 							<tr>
 								<td class="title_name">
 									<div class="d-flex align-items-center name_ttl">
@@ -569,7 +571,7 @@
 								<td class="text-center">123123</td>
 								<td class="text-center">123123</td>
 							</tr>
-						</tbody>
+						</tbody> -->
 					</table>
 					<div class="row mx-n2 py-3">
 						<div class="col-auto px-2 mb-3 pr-5">
@@ -602,16 +604,62 @@
 	<script src="js/bootstrap.bundle.min.js"></script>
 	<script src="js/bootstrap-select.min.js"></script>
 
-	<script src="js/jquery.dataTables.min.js"></script>
-	<script src="js/dataTables.fixedColumns.min.js"></script>
+	<!-- <script src="js/jquery.dataTables.min.js"></script>
+	<script src="js/dataTables.fixedColumns.min.js"></script> -->
+
+	<!-- <script src="https://cdn.datatables.net/rowreorder/1.4.1/js/dataTables.rowReorder.min.js"></script>
+	<script src="https://editor.datatables.net/extensions/Editor/js/dataTables.editor.min.js"></script> -->
+
+	<script src="https://cdn.datatables.net/1.13.6/js/jquery.dataTables.min.js"></script>
+	<script src="https://cdn.datatables.net/buttons/2.4.2/js/dataTables.buttons.min.js"></script>
+	<script src="https://cdn.datatables.net/select/1.7.0/js/dataTables.select.min.js"></script>
+	<script src="https://cdn.datatables.net/datetime/1.5.1/js/dataTables.dateTime.min.js"></script>
+	<script src="https://cdn.datatables.net/rowreorder/1.4.1/js/dataTables.rowReorder.min.js"></script>
+	<script src="js/dataTables.editor.min.js"></script>
 
 	<script src="js/main.js"></script>
 
 
 	<script>
 		$(document).ready(function () {
-			var table = $('#example').DataTable({
-				scrollY: "200px",
+			// var table = $('#example').DataTable({
+			// 	scrollY: "200px",
+			// 	scrollX: true,
+			// 	scrollCollapse: true,
+			// 	paging: false,
+			// 	"ordering": false,
+			// 	"searching": false,
+			// 	"stripeClasses": [],
+			// 	fixedColumns: {
+			// 		left: 1
+			// 	}
+			// });
+			const editor = new DataTable.Editor({
+				ajax: 'sequence.json',
+				fields: [
+					{
+						label: 'Order:',
+						name: 'readingOrder',
+						fieldInfo: 'This field can only be edited via click and drag row reordering.'
+					},
+					{
+						label: 'Title:',
+						name: 'title'
+					},
+					{
+						label: 'Author:',
+						name: 'author'
+					},
+					{
+						label: 'Duration (seconds):',
+						name: 'duration'
+					}
+				],
+				table: '#example'
+			});
+
+			const table = new DataTable('#example', {
+				scrollY: "500px",
 				scrollX: true,
 				scrollCollapse: true,
 				paging: false,
@@ -620,8 +668,45 @@
 				"stripeClasses": [],
 				fixedColumns: {
 					left: 1
-				}
+				},
+				ajax: 'sequence.json',
+				// buttons: [
+				// 	{ extend: 'create', editor: editor },
+				// 	{ extend: 'edit', editor: editor },
+				// 	{ extend: 'remove', editor: editor }
+				// ],
+				columns: [
+					{ data: 'readingOrder', className: 'reorder' },
+					{ data: 'title' },
+					{ data: 'author' },
+					{
+						data: 'duration',
+						render: data => parseInt(data / 60, 10) + 'h ' + (data % 60) + 'm'
+					}
+				],
+				columnDefs: [{ orderable: false, targets: [1, 2, 3] }],
+				dom: 'Bfrtip',
+				rowReorder: {
+					dataSrc: 'readingOrder',
+					editor: editor
+				},
+				select: true
 			});
+
+			// editor
+			// 	.on('postCreate postRemove', function () {
+			// 		// After create or edit, a number of other rows might have been effected -
+			// 		// so we need to reload the table, keeping the paging in the current position
+			// 		table.ajax.reload(null, false);
+			// 	})
+			// 	.on('initCreate', function () {
+			// 		// Enable order for create
+			// 		editor.field('readingOrder').enable();
+			// 	})
+			// 	.on('initEdit', function () {
+			// 		// Disable for edit (re-ordering is performed by click and drag)
+			// 		editor.field('readingOrder').disable();
+			// 	});
 		});
 	</script>
 </body>
