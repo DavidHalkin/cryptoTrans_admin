@@ -407,3 +407,6 @@ div.dataTables_wrapper div.dataTables_filter label {
 		flex: 0 0 20px;
 	}
 }
+table.dataTable tbody tr.selected>* {
+	box-shadow: inset 0 0 0 9999px rgba(151, 131, 3, 0.9) !important;
+}
